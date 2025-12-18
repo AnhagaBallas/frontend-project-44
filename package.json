@@ -1,0 +1,23 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/AnhagaBallas/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AnhagaBallas/frontend-project-44/actions)",
+  "homepage": "https://github.com/AnhagaBallas/frontend-project-44#readme",
+  "bugs": {
+    "url": "https://github.com/AnhagaBallas/frontend-project-44/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnhagaBallas/frontend-project-44.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "brain-games.js",
+  "bin": {
+    "code": "bin/brain-games.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
