@@ -1,3 +1,4 @@
+// src/games/progression.js
 import runEngine from './engine.js';
 
 const GAME_DESCRIPTION = 'What number is missing in the progression?';

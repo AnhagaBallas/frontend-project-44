@@ -1,3 +1,4 @@
+// src/games/even.js
 import runEngine from './engine.js';
 
 const GAME_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';

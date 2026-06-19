@@ -1,29 +1,26 @@
+// src/games/engine.js
 import readlineSync from 'readline-sync';
+import greeting from '../cli.js';
 
-const ROUNDS = 3;
+const ROUNDS_COUNT = 3;
 
-const ask = (question) => readlineSync.question(question);
+const runEngine = (description, generateQuestion) => {
+  const name = greeting();
+  console.log(description);
 
-const runEngine = (gameDescription, generateQuestion) => {
-  console.log('Welcome to the Brain Games!');
-  console.log(gameDescription);
-
-  const name = ask('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-
-  for (let i = 0; i < ROUNDS; i += 1) {
+  for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     const [question, correctAnswer] = generateQuestion();
-
     console.log(`Question: ${question}`);
-    const userAnswer = ask('Your answer: ');
 
-    if (userAnswer === String(correctAnswer)) {
-      console.log('Correct!');
-    } else {
+    const userAnswer = readlineSync.question('Your answer: ');
+
+    if (userAnswer !== String(correctAnswer)) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
+
+    console.log('Correct!');
   }
 
   console.log(`Congratulations, ${name}!`);

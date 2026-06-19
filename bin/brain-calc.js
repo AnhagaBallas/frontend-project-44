@@ -1,5 +1,3 @@
 #!/usr/bin/env node
-
-import runGame from '../src/games/calc.js';
-
-runGame();
+import greeting from '../src/cli.js';
+greeting();

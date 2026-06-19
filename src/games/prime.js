@@ -1,3 +1,4 @@
+// src/games/prime.js
 import runEngine from './engine.js';
 
 const GAME_DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';

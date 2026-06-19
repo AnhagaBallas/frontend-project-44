@@ -1,12 +1,11 @@
+// src/games/calc.js
 import runEngine from './engine.js';
 
 const GAME_DESCRIPTION = 'What is the result of the expression?';
 
-const OPERATORS = ['+', '-', '*'];
-
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-const getRandomOperator = () => OPERATORS[Math.floor(Math.random() * OPERATORS.length)];
+const OPERATORS = ['+', '-', '*'];
 
 const calculate = (a, operator, b) => {
   switch (operator) {
@@ -20,10 +19,9 @@ const calculate = (a, operator, b) => {
 const generateQuestion = () => {
   const a = getRandomInt(1, 50);
   const b = getRandomInt(1, 50);
-  const operator = getRandomOperator();
-  const question = `${a} ${operator} ${b}`;
+  const operator = OPERATORS[getRandomInt(0, OPERATORS.length - 1)];
   const correctAnswer = calculate(a, operator, b);
-  return [question, correctAnswer];
+  return [`${a} ${operator} ${b}`, correctAnswer];
 };
 
 const runGame = () => runEngine(GAME_DESCRIPTION, generateQuestion);
